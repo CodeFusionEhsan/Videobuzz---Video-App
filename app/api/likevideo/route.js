@@ -10,7 +10,7 @@ export async function POST(req) {
         const data = await req.formData()
         const id = data.get("id")
         const likedby = data.get("likedby")
-        await mongoose.connect("mongodb+srv://ehsan:ehsan2024@cluster0.vqrb8yl.mongodb.net/Videobuzz?retryWrites=true&w=majority")
+        await mongoose.connect(process.env.MONGO_URI)
                         console.log("Connected to database")
         const video = await Video.findById(id)
         await video.likes.push(likedby)
