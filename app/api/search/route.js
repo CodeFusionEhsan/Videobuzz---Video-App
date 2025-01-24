@@ -12,7 +12,7 @@ export async function POST(req) {
             if (s.search(/\./) !== -1) { s = "\""+s+"\""; }
             f_query += s + " ";
         });
-        await mongoose.connect("mongodb+srv://ehsan:ehsan2024@cluster0.vqrb8yl.mongodb.net/Videobuzz?retryWrites=true&w=majority")
+        await mongoose.connect(process.env.MONGO_URI)
                         console.log("Connected to database")
         const videos = await Video.find({$text: {$search: f_query.trim()}})
         console.log(videos)
