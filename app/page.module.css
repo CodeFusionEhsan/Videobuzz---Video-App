@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+/* components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(32, 15, 48);
+  color: white;
+  position: relative;
+  font-family: 'Inter Tight', serif;
+}
+
+.footer {
+  background-color: rgb(32, 15, 48);
+  margin-top: 3rem;
+  width: 100%;
+  padding: 0.9rem 0.5rem;
+}
+
+.footer >h3 {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Inter Tight', serif;
+}
+
+.navbar > div > .logo {
+  font-size: 2.75rem;
+  font-family: 'Smooch Sans', serif;
+}
+
+.navbar > ul {
+  display: flex;
+  list-style: none;
+  padding-top: 0.25rem;
+}
+
+.navbar > ul > li {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.navbar > ul > li:hover {
+  background: white;
+  color: rgb(32, 15, 48);
+  transform: scale(1.09);
+}
+
+.navbar > form > input {
+  padding: 0.5rem 0.5rem;
+  width: 380px;
+  border-radius: 50px;
+  background: transparent;
+  border: 0.5px solid grey;
+  color: white;
+  transform: scale(1.05);
+}
+
+.navbar > form > button {
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.navbar > form > button:hover {
+  background: white;
+  color: black;
+}
+
+.navbar > form > input, .navbar > form > button {
+  font-family: 'DM sans', serif;
+}
+
+.hamburger {
+font-size: 2rem;
+padding: 0.1rem 1rem;
+border: 0.5px solid white;
+color: white;
+background: transparent;
+display: none;
+}
+
+.sidebar {
+  height: 100%;
+  background: rgb(32, 15, 48);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  position: fixed;
+  margin-left: -120rem;
+  transition: all .3s ease-in-out;
+  z-index: 1000;
+}
+
+.close {
+  font-size: 2rem;
+  padding: 0.1rem 1rem;
+  border: 0.5px solid white;
+  color: white;
+  background: transparent;
+  margin-left: 12rem;
+  margin-top: 1rem;
+}
+
+.sidebar > .logo {
+  font-size: 2.75rem;
+  font-family: 'Smooch Sans', serif;
+  margin: 1.8rem 0;
+}
+
+.sidebar > form {
+  margin-bottom: 2rem;
+}
+
+.sidebar > form > input {
+  padding: 0.5rem 0.5rem;
+  width: 80%;
+  border-radius: 50px;
+  background: transparent;
+  border: 0.5px solid grey;
+  color: white;
+  transform: scale(1.05);
+}
+
+.sidebar > form > button {
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.sidebar > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar > ul > li {
+  font-size: 1.75rem;
+  padding: 1rem 0;
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.sidebar > ul > li:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+.showsidebar {
+  height: 100%;
+  background: rgb(32, 15, 48);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  position: fixed;
+  transition: all .3s ease-in-out;
+  z-index: 1000;
+}
+
+.showsidebar > .logo {
+  font-size: 2.75rem;
+  font-family: 'Smooch Sans', serif;
+  margin: 1.8rem 0;
+}
+
+.showsidebar > form {
+  margin-bottom: 2rem;
+}
+
+.showsidebar > form > input {
+  padding: 0.5rem 0.5rem;
+  width: 80%;
+  border-radius: 50px;
+  background: transparent;
+  border: 0.5px solid grey;
+  color: white;
+  transform: scale(1.05);
+}
+
+.showsidebar > form > button {
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.showsidebar > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.showsidebar > ul > li {
+  font-size: 1.75rem;
+  padding: 1rem 0;
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.showsidebar > ul > li:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+@media(max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar > ul {
+    display: none;
+  }
+
+  .navbar > form {
+    display: none;
+  }
+}
+
+.loginContainer {
+  margin: auto;
+  width: 50%;
+  box-shadow: 0 0 50px solid gray;
+  border: 0.5px solid lightgray;
+  padding: 2rem 2rem;
+  text-align: center;
+  margin-top: 5rem;
+  background: rgb(32, 15, 48);
+  color: white;
+  font-family: 'DM Sans', serif;
+  border-radius: 30px;
+}
+
+.loginContainer > h1 {
+  margin-bottom: 3rem;
+}
+
+.loginContainer > button {
+  padding: 1.1rem 6rem;
+  background: transparent;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.loginContainer > button:hover {
+  background: white;
+  color: rgb(32, 15, 48);
+}
+
+.homepage {
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.homepage2 {
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 2rem;
+  padding-left: 3vw;
+}
+
+.container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 5px;
+  column-gap: 5px;
+}
+
+.container2 {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 5px;
+  column-gap: 5px;
+}
+
+.titlevid {
+  width: 320px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.desc {
+  font-size: 17px;
+  color: rgb(102, 102, 102);
+  text-align: center;
+}
+
+.titlevid2 {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.videsctitle {
+  margin-top: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.videodesc {
+  width: 60%;
+  line-height: 25px;
+}
+
+.vidbtn {
+  margin-top: 2rem;
+  padding: 0.8rem 4rem;
+  border: 1px solid #060613;
+  background: #060613;
+  color: white;
+  border-radius: 50px;
+}
+
+.uploadpage {
+  width: 100%;
+  padding: 0 2vw;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 5rem;
+}
+
+.uploadpage > h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.uploadpage > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadpage > form > input {
+  width: 40rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.4rem;
+  border: 0.5px solid grey;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+
+.uploadpage > form > textarea {
+  width: 40rem;
+  height: 10rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.4rem;
+  border: 0.5px solid grey;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+
+.uploadpage > form > button {
+  padding: 1.2rem 5rem;
+  margin: 2rem 0;
+  font-size: 1.3rem;
+  border: none;
+  color: white;
+  background-color: #060613;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+@media(max-width: 768px) {
+  .loginContainer{
+    width: 90%;
+    margin-top: 5rem;
+  }
+
+  .container,.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    row-gap: 20px;
+  }
+
+  .homepage{
+    padding-left: 0.5vw;
+    width: 400px;
+  }
+
+  .videocontainer {
+    height: 300px;
+    width: 350px;
+  }
+
+  .hamburger{
+    margin-left: -5rem;
+  }
+
+  .uploadpage > form > input, .uploadpage > form > textarea {
+    width: 25rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.4rem;
+    border: 0.5px solid grey;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+  }
+
+  .zoomvid {
+    width: 95%;
+    height: 550px;
+    margin-top: -5rem;
+  }
+
+  .videodesc {
+    width: 100%;
+  }
+}
+
+.loading {
+  text-align: center;
+  width: 100%;
+}
+
+.loading > img {
+  width: 150px;
+  height: 150px;
+  margin-top: 3rem;
+}
