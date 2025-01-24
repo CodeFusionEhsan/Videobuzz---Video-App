@@ -53,6 +53,10 @@ export default function Home() {
   return (
     <div className={styles.loading}>
         <img src="/loading.gif"/>
+      <div className={styles.loginContainer}>
+        <h1>Login To Videobuzz With Social Media</h1>
+        <button onClick={signIn}>Sign In To Your Account</button>
+      </div>
       </div>
   );
 }
