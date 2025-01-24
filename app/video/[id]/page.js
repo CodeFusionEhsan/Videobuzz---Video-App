@@ -63,7 +63,10 @@ export default function Page({ params }) {
         return(
             <div className={styles.homepage2}>
         {loading? 
-        <h1 className={styles.loading}>Loading...</h1>
+        
+<div className={styles.loading}>
+      <img src="loading.gif"/>
+    </div>
         : <div>
             <div><h1>{error}</h1></div>
             <div>
@@ -86,12 +89,9 @@ export default function Page({ params }) {
     }
 
     return (
-        <div className={styles.loading}>
-        <img src="/loading.gif"/>
         <div className={styles.loginContainer}>
         <h1>Login To Videobuzz With Social Media</h1>
         <button onClick={signIn}>Sign In To Your Account</button>
-      </div>
       </div>
     )
 }
