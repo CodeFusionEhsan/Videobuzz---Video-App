@@ -50,7 +50,10 @@ export default function Home() {
             </div>
             )
           }) 
-        : <h1>No Videos Found!</h1>}
+        : 
+<div className={styles.loading}>
+      <img src="loading.gif"/>
+    </div>}
       </div>
     </div>
         )
