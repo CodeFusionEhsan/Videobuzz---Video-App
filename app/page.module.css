@@ -465,10 +465,12 @@ display: none;
 .loading {
   text-align: center;
   width: 100%;
+  margin: auto;
 }
 
 .loading > img {
   width: 150px;
   height: 150px;
   margin-top: 3rem;
+  margin:auto;
 }
