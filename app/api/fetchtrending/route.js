@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 export async function GET(req) {
     if (req.method == "GET") {
-        await mongoose.connect("mongodb+srv://ehsan:ehsan2024@cluster0.vqrb8yl.mongodb.net/Videobuzz?retryWrites=true&w=majority")
+        await mongoose.connect(process.env.MONGO_URI)
                         console.log("Connected to database")
         const videos = await Video.find().sort({likes: -1}).exec()
 
