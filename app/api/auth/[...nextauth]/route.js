@@ -11,14 +11,14 @@ const handler = NextAuth({
   providers: [
     GithubProvider({
       clientId: "Ov23liu8zVVjiNFEoppC",
-      clientSecret: "cee87be3d11a22e45a2281be7451acc8c1dc35a4",
+      clientSecret: process.env.GIT_SECRET,
     }),
     GoogleProvider({
         clientId: "102872295334-5jrotsdl19hitothra1tdrt9l86k4cuu.apps.googleusercontent.com",
-        clientSecret: "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",
+        clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
-  secret: "73f8d9b1-e456-42cf-9a32-af72bfc6c7e0_XzJyb3p6YnVtcF8yNk5vczY3NjA3NTQjISQy"
+  secret: process.env.SECRET
 })
 
 export {handler as GET, handler as POST}
