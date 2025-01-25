@@ -23,10 +23,14 @@ export default function Upload() {
     formData.append("video", file)
     formData.append("category", category)
 
+    console.log("fetching")
+
     const res = await fetch('/api/upload', {
       method: 'POST',
       body: formData
     })
+
+    console.log("fetched")
 
     const jsres = await res.json()
 
