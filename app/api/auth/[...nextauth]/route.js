@@ -14,7 +14,7 @@ const handler = NextAuth({
       clientSecret: process.env.GIT_SECRET,
     }),
     GoogleProvider({
-        clientId: "102872295334-5jrotsdl19hitothra1tdrt9l86k4cuu.apps.googleusercontent.com",
+        clientId: "320640940099-p0iaqcofpk44sha5opsud7ucjb9psosf.apps.googleusercontent.com",
         clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
